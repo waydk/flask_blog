@@ -1,0 +1,71 @@
+body {
+    background-color: #9A9483;
+    font-family: 'Raleway', sans-serif;
+    color: #E5DCC3;
+}
+
+h1 {
+    color: white;
+}
+
+/* Navbar */
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-size: 15px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #E5DCC3;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-size: 30px;
+}
+
+.navbar .navbar-brand:hover {
+    color: #E5DCC3;
+}
+
+
+/* About me */
+#about-me {
+    padding: 12% 10% 11% 10%;
+    font-size: 25px;
+}
+
+.about-img {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 765px){
+    .about-img {
+        width: 400px;
+        height: 300px;
+    }
+
+    #about-me {
+        font-size: 20px;
+    }
+  
+  }
+
+/* Last articles */
+
+#last-articles {
+    padding-bottom: 20px;
+}
+
+.card {
+    color: #9A9483;
+}
+
+.btn-card {
+    color: #E5DCC3;
+    background-color: #9A9483;
+}
+
+.btn-card:hover {
+    color:white;
+}
+
