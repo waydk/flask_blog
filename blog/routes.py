@@ -1,7 +1,7 @@
 from flask import render_template
 from flask import current_app as app
 
-from .models import Articles, db
+# from .models import Articles, db
 
 @app.route('/')
 def home():
