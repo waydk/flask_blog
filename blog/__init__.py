@@ -14,5 +14,4 @@ def create_app():
     with app.app_context():
         from . import routes  # Import routes
         db.create_all()  # Create sql tables for our data models
-
         return app
