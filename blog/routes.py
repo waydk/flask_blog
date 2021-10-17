@@ -2,13 +2,10 @@
 from flask import render_template
 from flask import current_app as app
 
-from .models import Articles, db
+from .models import Articles
 
 @app.route('/')
 def home():
-    # article = Articles(title='Example title', content='Some content', date=datetime.now())
-    # db.session.add(article)
-    # db.session.commit()
 
-    articles = Articles.query.limit(4).all()
+    articles = Articles.query.order_by(Articles.date.desc()).limit(4).all()
     return render_template("index.html", articles=articles)
