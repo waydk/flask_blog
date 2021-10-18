@@ -16,3 +16,7 @@ class Config:
 
     # ADMIN
     FLASK_ADMIN_SWATCH = 'lux'
+
+    # BasicAuth
+    BASIC_AUTH_USERNAME = env("BASIC_AUTH_USERNAME")
+    BASIC_AUTH_PASSWORD = env("BASIC_AUTH_PASSWORD")

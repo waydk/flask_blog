@@ -1,5 +1,5 @@
-from flask_admin.contrib.sqla.view import ModelView
 from . import db
+
 
 class Articles(db.Model):
     __tablename__ = 'articles'
@@ -17,7 +17,3 @@ class Articles(db.Model):
     def __repr__(self):
         return "<Articles(title='%s', content='%s', date='%s')>" % (
             self.title, self.content, self.date)
-
-# Admin ModelView
-class AriclesView(ModelView):
-    can_delete = True
