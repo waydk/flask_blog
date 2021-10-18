@@ -99,3 +99,14 @@ h1 {
     background-color: #9A9483;
     color: white;
 }
+
+/* Contact */
+.success-btn {
+    background-color: #646054;
+    color: #d3d3d3;
+}
+
+.success-btn:hover {
+    background-color: #8b877a;
+    color: #d3d3d3;
+}
