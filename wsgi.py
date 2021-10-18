@@ -1,10 +1,10 @@
-from flask_admin.base import Admin
-from blog import create_app
-from blog.models import Articles, AriclesView, db
+from blog import create_app, admin
+from blog.models import Articles, db
+from blog.admin_views import ArticleView
 
 app = create_app()
 
+
 if __name__ == '__main__':
-	admin = Admin(app, name='waydk blog', template_mode='bootstrap4')
-	admin.add_view(AriclesView(Articles, db.session))
+	admin.add_view(ArticleView(Articles, db.session))
 	app.run(debug=True)
