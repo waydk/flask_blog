@@ -57,6 +57,7 @@ h1 {
 }
 
 .card {
+    height: 200px;
     color: #9A9483;
 }
 
@@ -70,12 +71,31 @@ h1 {
 }
 
 /* Footer */
+.text-footer {
+    color: #d3d3d3;
+}
+
 .footer-icon {
     text-align: center;
-    color: #5c574a;
+    color: #726d5f;
     padding-left: 20px;
 }
 
 .footer-icon:hover {
-    color:#9A9483;
+    color:#5c574a;
+}
+
+.footer {
+    margin-top: 100px;
+}
+
+/* All articles */
+.all_articles {
+    padding-bottom: 30px;
+}
+
+
+.all_articles .card {
+    background-color: #9A9483;
+    color: white;
 }

@@ -4,6 +4,8 @@ env = Env()
 env.read_env()
 
 class Config:
+    SECRET_KEY = env('SECRET_KEY')
+
     # Database
     PG_HOST = env("PG_HOST")
     PG_USER = env("PG_USER")

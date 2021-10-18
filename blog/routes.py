@@ -1,4 +1,3 @@
-# from datetime import datetime
 from flask import render_template
 from flask import current_app as app
 
@@ -14,3 +13,13 @@ def home():
 @app.route('/logout')
 def Logout():
     raise AuthException('Successfully logged out.')
+
+@app.route('/articles')
+def show_articles():
+    articles = Articles.query.order_by(Articles.date.desc()).all()
+    return render_template('all_articles.html', articles=articles)
+
+@app.route('/article/<title>')
+def show_article(title):
+    article = Articles.query.filter_by(title=title).first()
+    return render_template('article.html', article=article)
