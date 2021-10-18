@@ -1,0 +1,10 @@
+{% include "header.html" %}
+    <h1 class="text-center p-5">{{ article.title }}</h1>
+    <div class="container pb-3">
+        {% if article.content|length > 1500 %}
+            <p>{{ article.content }}</p> 
+        {% else %}
+            <p style="font-size: 25px; text-align: center;">{{ article.content }}</p>
+        {% endif %}
+    </div>
+{% include "footer.html" %}
