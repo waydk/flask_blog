@@ -44,6 +44,9 @@ def show_article(title):
 def contact():
     if request.method == "POST":
         data = request.form
-        send_email(data["name"], data["email"], data["phone"], data["message"])
+        try:
+            send_email(data["name"], data["email"], data["phone"], data["message"])
+        except UnicodeEncodeError:
+            return render_template('contact.html', title='Your email was not sent (english only)')
         return render_template('contact.html', title='Your email has been sent')
     return render_template('contact.html', title='Contact me')
