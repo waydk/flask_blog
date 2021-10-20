@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "flask_blog"
+version = "0.1.0"
+description = "My portfolio project. Written in python using Flask for the backend and Bootstrap for the frontend"
+authors = ["waydk <waydk.note@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.0.2"
+Flask-SQLAlchemy = "^2.5.1"
+psycopg2-binary = "^2.9.1"
+environs = "^9.3.4"
+Flask-Admin = "^1.5.8"
+Flask-BasicAuth = "^0.2.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
