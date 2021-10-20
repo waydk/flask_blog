@@ -37,7 +37,8 @@
 ### Launch
 * <code>git clone https://github.com/waydk/flask_blog</code>
 * <code>cd flask_blog</code>
-* <code>python3 -m venv venv</code>
-* <code>source venv/bin/activate</code>
-* <code>pip3 install -r requirements.txt</code>
-* <code>python3 wsgi.py</code
+* If you don't have poetry <code>pip install poetry</code>
+* Install dependencies: <code>poetry install</code>
+* Create a virtual environment <code>poetry env use python3.8 *or your version* </code>
+* Activate the virtual environment <code>poetry shell</code>
+* Launching an application <code>python3 wsgi.py</code>
