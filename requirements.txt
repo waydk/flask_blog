@@ -1,6 +1,0 @@
-Flask==2.0.1
-Flask-SQLAlchemy==2.5.1
-psycopg-binary==3.0.1
-environs==9.3.4
-Flask-Admin==1.5.8
-Flask-BasicAuth==0.2.0
