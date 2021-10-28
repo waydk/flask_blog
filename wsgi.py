@@ -7,4 +7,4 @@ app = create_app()
 
 if __name__ == '__main__':
 	admin.add_view(ArticleView(Articles, db.session))
-	app.run(debug=True)
+	app.run()
