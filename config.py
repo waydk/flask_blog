@@ -8,6 +8,8 @@ class Config:
 
     # Database
     DATABASE_URL = env("DATABASE_URL")
+    if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
     SQLALCHEMY_ECHO = False
