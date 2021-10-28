@@ -7,12 +7,9 @@ class Config:
     SECRET_KEY = env('SECRET_KEY')
 
     # Database
-    PG_HOST = env("PG_HOST")
-    PG_USER = env("PG_USER")
-    PG_PASSWORD = env("PG_PASSWORD")
-    DATABASE = env("DATABASE")
+    DATABASE_URL = env("DATABASE_URL")
 
-    SQLALCHEMY_DATABASE_URI = f'postgresql://{PG_USER}:{PG_PASSWORD}@{PG_HOST}/{DATABASE}'
+    SQLALCHEMY_DATABASE_URI = DATABASE_URL
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
