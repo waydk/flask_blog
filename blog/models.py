@@ -1,5 +1,6 @@
-from . import db
+from flask_sqlalchemy import SQLAlchemy
 
+db = SQLAlchemy()
 
 class Articles(db.Model):
     __tablename__ = 'articles'
