@@ -1,8 +1,9 @@
 from flask import Response
 from flask_admin.contrib.sqla import ModelView
+from flask_basicauth import BasicAuth
 from werkzeug.exceptions import HTTPException
-from . import basic_auth
 
+basic_auth = BasicAuth()
 
 # login failed handler
 # https://computableverse.com/blog/flask-admin-using-basicauth

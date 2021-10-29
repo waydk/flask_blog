@@ -1,11 +1,12 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
-from flask_basicauth import BasicAuth
+
+from blog.admin_views import ArticleView
+from .models import Articles, db
+
+from .admin_views import basic_auth
 
 
-db = SQLAlchemy()
-basic_auth = BasicAuth()
 admin = Admin(name='waydk blog', template_mode='bootstrap4')
 
 
@@ -21,4 +22,5 @@ def create_app():
     with app.app_context():
         from . import routes  # Import routes
         db.create_all()  # Create sql tables for our data models
+        admin.add_view(ArticleView(Articles, db.session))
         return app
