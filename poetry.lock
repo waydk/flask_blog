@@ -36,6 +36,19 @@ lint = ["flake8 (==3.9.2)", "flake8-bugbear (==21.4.3)", "mypy (==0.910)", "pre-
 tests = ["pytest", "dj-database-url", "dj-email-url", "django-cache-url"]
 
 [[package]]
+name = "flake8"
+version = "4.0.1"
+description = "the modular source code checker: pep8 pyflakes and co"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+mccabe = ">=0.6.0,<0.7.0"
+pycodestyle = ">=2.8.0,<2.9.0"
+pyflakes = ">=2.4.0,<2.5.0"
+
+[[package]]
 name = "flask"
 version = "2.0.2"
 description = "A simple framework for building complex web applications."
@@ -104,6 +117,20 @@ python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 docs = ["sphinx"]
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "itsdangerous"
 version = "2.0.1"
 description = "Safely pass data to untrusted environments and back."
@@ -148,12 +175,36 @@ lint = ["mypy (==0.910)", "flake8 (==4.0.1)", "flake8-bugbear (==21.9.2)", "pre-
 tests = ["pytest", "pytz", "simplejson"]
 
 [[package]]
+name = "mccabe"
+version = "0.6.1"
+description = "McCabe checker, plugin for flake8"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "psycopg2-binary"
 version = "2.9.1"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "pycodestyle"
+version = "2.8.0"
+description = "Python style guide checker"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pyflakes"
+version = "2.4.0"
+description = "passive checker of Python programs"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "python-dotenv"
@@ -228,7 +279,7 @@ locale = ["Babel (>=1.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f4a77d5eb83caaa118234d255adae0101d00e72f6b2f3d30ebb6d9ffca3d565f"
+content-hash = "c17a9678c5b72cb5be8d8f276fe5d0ceace55e791913b5ae5fb457efcb315e02"
 
 [metadata.files]
 click = [
@@ -242,6 +293,10 @@ colorama = [
 environs = [
     {file = "environs-9.3.4-py2.py3-none-any.whl", hash = "sha256:7412eca2996027a0a1eafd89bbfec872568e7b4ca75fc980817bfd7788cb5a1f"},
     {file = "environs-9.3.4.tar.gz", hash = "sha256:eecf57fb1b91f1166a8a16344a3fd12ea55b7a0f233c906d86506bdb40738a0f"},
+]
+flake8 = [
+    {file = "flake8-4.0.1-py2.py3-none-any.whl", hash = "sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d"},
+    {file = "flake8-4.0.1.tar.gz", hash = "sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d"},
 ]
 flask = [
     {file = "Flask-2.0.2-py3-none-any.whl", hash = "sha256:cb90f62f1d8e4dc4621f52106613488b5ba826b2e1e10a33eac92f723093ab6a"},
@@ -308,6 +363,10 @@ greenlet = [
     {file = "greenlet-1.1.2-cp39-cp39-win32.whl", hash = "sha256:f70a9e237bb792c7cc7e44c531fd48f5897961701cdaa06cf22fc14965c496cf"},
     {file = "greenlet-1.1.2-cp39-cp39-win_amd64.whl", hash = "sha256:013d61294b6cd8fe3242932c1c5e36e5d1db2c8afb58606c5a67efce62c1f5fd"},
     {file = "greenlet-1.1.2.tar.gz", hash = "sha256:e30f5ea4ae2346e62cedde8794a56858a67b878dd79f7df76a0767e356b1744a"},
+]
+gunicorn = [
+    {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
+    {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 itsdangerous = [
     {file = "itsdangerous-2.0.1-py3-none-any.whl", hash = "sha256:5174094b9637652bdb841a3029700391451bd092ba3db90600dea710ba28e97c"},
@@ -377,6 +436,10 @@ marshmallow = [
     {file = "marshmallow-3.14.0-py3-none-any.whl", hash = "sha256:6d00e42d6d6289f8cd3e77618a01689d57a078fe324ee579b00fa206d32e9b07"},
     {file = "marshmallow-3.14.0.tar.gz", hash = "sha256:bba1a940985c052c5cc7849f97da196ebc81f3b85ec10c56ef1f3228aa9cbe74"},
 ]
+mccabe = [
+    {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
+    {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
+]
 psycopg2-binary = [
     {file = "psycopg2-binary-2.9.1.tar.gz", hash = "sha256:b0221ca5a9837e040ebf61f48899926b5783668b7807419e4adae8175a31f773"},
     {file = "psycopg2_binary-2.9.1-cp310-cp310-macosx_10_14_x86_64.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:24b0b6688b9f31a911f2361fe818492650795c9e5d3a1bc647acbd7440142a4f"},
@@ -412,6 +475,14 @@ psycopg2-binary = [
     {file = "psycopg2_binary-2.9.1-cp39-cp39-manylinux_2_24_ppc64le.whl", hash = "sha256:3242b9619de955ab44581a03a64bdd7d5e470cc4183e8fcadd85ab9d3756ce7a"},
     {file = "psycopg2_binary-2.9.1-cp39-cp39-win32.whl", hash = "sha256:0b7dae87f0b729922e06f85f667de7bf16455d411971b2043bbd9577af9d1975"},
     {file = "psycopg2_binary-2.9.1-cp39-cp39-win_amd64.whl", hash = "sha256:b4d7679a08fea64573c969f6994a2631908bb2c0e69a7235648642f3d2e39a68"},
+]
+pycodestyle = [
+    {file = "pycodestyle-2.8.0-py2.py3-none-any.whl", hash = "sha256:720f8b39dde8b293825e7ff02c475f3077124006db4f440dcbc9a20b76548a20"},
+    {file = "pycodestyle-2.8.0.tar.gz", hash = "sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f"},
+]
+pyflakes = [
+    {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
+    {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
 python-dotenv = [
     {file = "python-dotenv-0.19.1.tar.gz", hash = "sha256:14f8185cc8d494662683e6914addcb7e95374771e707601dfc70166946b4c4b8"},
