@@ -50,6 +50,14 @@ h1 {
   
   }
 
+@media (max-width: 450px){
+    .about-img {
+        width: 270px;
+        height: 200px;
+    }
+}
+
+
 /* Last articles */
 
 #last-articles {
