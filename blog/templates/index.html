@@ -10,7 +10,6 @@
           <div class="col">
             <h1 class="lng-about-title text-center">About me</h1>
             <p class="lng-about-text">My name is Kirill, but I like to be called Kira. I'm learning Python for Backend development. Also I'm learning a little bit of Js, I've seen a documentary about Vue.js and I'm hooked. Now I'm learning Django to become a complete backend developer. In my free time I like to watch anime. My favorite is cowboy bebop. I also like reading. My favorite author is Haruki Murakami. That's all the information.</p>
-            {{ request.referrer }}
           </div>
       </div>
     </div>
@@ -29,7 +28,7 @@
 
                   <h5 class="card-title">{{ article.title_en }}</h5>
                   <p class="card-text">{{ article.content_en[:50] }}...</p>
-                  <a href="{{ url_for('show_article', title=article.title) }}" class="btn btn-card">Read more</a>
+                  <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card">Read more</a>
                 </div>
                 <div class="card-footer text-muted">
                   {{ article.date.strftime("%Y.%m.%d") }}
