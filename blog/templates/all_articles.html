@@ -5,9 +5,9 @@
                 <div class="col-12 all_articles">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{ article.title }}</h5>
-                            <p class="card-text">{{ article.content[:70] }}...</p>
-                            <a href="{{ url_for('show_article', title=article.title) }}" class="btn btn-card">Read more</a>
+                            <h5 class="card-title">{{ article.title_en }}</h5>
+                            <p class="card-text">{{ article.content_en[:70] }}...</p>
+                            <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card">Read more</a>
                         </div>
                         <div style='color: #c0c0c0;' class="card-footer">
                             {{article.date.strftime("%Y.%m.%d")}}

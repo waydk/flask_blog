@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/fc06632d11.js" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='live2d-widget/autoload.js') }}"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <title>waydk blog</title>
 </head>
 <body>
@@ -18,15 +17,19 @@
   <div class="container navbar-custom">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('home') }}">wayd.k blog</a>
+        <a class="navbar-brand lng-brand" href="{{ url_for('home') }}">wayd.k blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
-            <a class="nav-link" href="{{ url_for('show_articles') }}">All articles</a>
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+            <a class="nav-link lng-home" aria-current="page" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link lng-all_articles" href="{{ url_for('show_articles') }}">All articles</a>
+            <a class="nav-link lng-contact" href="{{ url_for('contact') }}">Contact</a>
+            <select class="change-lang">
+              <option value="ru" selected>RU</option>
+              <option value="en">EN</option>
+            </select>
           </div>
         </div>
       </div>

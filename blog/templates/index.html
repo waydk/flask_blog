@@ -5,11 +5,12 @@
     <div class="container">
       <div class="row">
           <div class="col text-center">
-            <img class="about-img" src="static/img/about-image.png" alt="">
+            <img id='img-about' class="about-img lng-img-about-m" src="static/img/about-image.png" alt="">
           </div>
           <div class="col">
-            <h1 class="text-center">About me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</p>
+            <h1 class="lng-about-title text-center">About me</h1>
+            <p class="lng-about-text">My name is Kirill, but I like to be called Kira. I'm learning Python for Backend development. Also I'm learning a little bit of Js, I've seen a documentary about Vue.js and I'm hooked. Now I'm learning Django to become a complete backend developer. In my free time I like to watch anime. My favorite is cowboy bebop. I also like reading. My favorite author is Haruki Murakami. That's all the information.</p>
+            {{ request.referrer }}
           </div>
       </div>
     </div>
@@ -17,7 +18,7 @@
 
   <!-- Last article section -->
   <section id='last-articles'>
-    <h1 class="text-center pb-2">Last Articles</h2>
+    <h1 class="text-center pb-2 lng-last_articles">Last Articles</h2>
 
       <div class="container pt-4">
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -25,12 +26,13 @@
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">{{article.title}}</h5>
-                  <p class="card-text">{{article.content[:50]}}...</p>
+
+                  <h5 class="card-title">{{ article.title_en }}</h5>
+                  <p class="card-text">{{ article.content_en[:50] }}...</p>
                   <a href="{{ url_for('show_article', title=article.title) }}" class="btn btn-card">Read more</a>
                 </div>
                 <div class="card-footer text-muted">
-                  {{article.date.strftime("%Y.%m.%d")}}
+                  {{ article.date.strftime("%Y.%m.%d") }}
                 </div>
               </div>
             </div>
