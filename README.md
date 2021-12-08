@@ -39,6 +39,5 @@
 * <code>cd flask_blog</code>
 * If you don't have poetry <code>pip install poetry</code>
 * Install dependencies: <code>poetry install</code>
-* Create a virtual environment <code>poetry env use python3.8 *or your version* </code>
 * Activate the virtual environment <code>poetry shell</code>
 * Launching an application <code>python3 wsgi.py</code>
