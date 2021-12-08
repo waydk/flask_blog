@@ -1,6 +1,6 @@
 const maxImg = document.querySelector('.right-panel img');
 const select = document.querySelector('select');
-const allLang = ['en', 'ru'];
+const allLang = ['ru', 'en'];
 
 document.querySelectorAll('.left-panel img').forEach(item => item.onmouseenter = (event) => maxImg.src = event.target.src);
 
@@ -17,7 +17,7 @@ function changeLanguage() {
     let hash = window.location.hash;
     hash = hash.substr(1);
     if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#en';
+        location.href = window.location.pathname + '#ru';
         location.reload();
     }
     select.value = hash;
