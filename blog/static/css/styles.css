@@ -135,14 +135,3 @@ hr {
     background-color: #8b877a;
     color: #d3d3d3;
 }
-
-/* Change Lang */
-.change-lang {
-    color: white;
-    background-color: #9A9483;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    outline: none;
-    padding: 5px;
-}

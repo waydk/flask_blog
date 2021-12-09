@@ -17,19 +17,15 @@
   <div class="container navbar-custom">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand lng-brand" href="{{ url_for('home') }}">wayd.k blog</a>
+        <a class="navbar-brand brand" href="{{ url_for('home') }}">wayd.k blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link lng-home" aria-current="page" href="{{ url_for('home') }}">Home</a>
-            <a class="nav-link lng-all_articles" href="{{ url_for('show_articles') }}">All articles</a>
-            <a class="nav-link lng-contact" href="{{ url_for('contact') }}">Contact</a>
-            <select class="change-lang">
-              <option value="ru" selected>RU</option>
-              <option value="en">EN</option>
-            </select>
+            <a class="nav-link home" aria-current="page" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link all_articles" href="{{ url_for('show_articles') }}">All articles</a>
+            <a class="nav-link contact" href="{{ url_for('contact') }}">Contact</a>
           </div>
         </div>
       </div>
