@@ -69,4 +69,4 @@ def contact():
         except UnicodeEncodeError:
             return render_template('contact.html', title='Your email was not sent (english only)')
         return render_template('contact.html', title='Your email has been sent')
-    return render_template('contact.html', title='Contact me')
+    return render_template('contact.html', title='Связаться со мной')

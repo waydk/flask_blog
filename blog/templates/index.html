@@ -8,8 +8,8 @@
             <img id='img-about' class="about-img lng-img-about-m" src="static/img/about-image.png" alt="">
           </div>
           <div class="col">
-            <h1 class="lng-about-title text-center">About me</h1>
-            <p class="lng-about-text">My name is Kirill, but I like to be called Kira. I'm learning Python for Backend development. Also I'm learning a little bit of Js, I've seen a documentary about Vue.js and I'm hooked. Now I'm learning Django to become a complete backend developer. In my free time I like to watch anime. My favorite is cowboy bebop. I also like reading. My favorite author is Haruki Murakami. That's all the information.</p>
+            <h1 class="lng-about-title text-center">Обо мне</h1>
+            <p class="lng-about-text">Меня зовут Кирилл, но мне нравится, когда меня называют Кирой. Я изучаю Python для разработки Backend. Также я изучаю немного Js, я посмотрел документальный фильм о Vue.js и меня зацепило. Сейчас я изучаю Django, чтобы стать полноценным бэкенд-разработчиком. В свободное время я люблю смотреть аниме. Мое любимое - "Ковбой Бибоп". Также я люблю читать. Мой любимый автор - Харуки Мураками. Вот и вся информация.</p>
           </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
 
   <!-- Last article section -->
   <section id='last-articles'>
-    <h1 class="text-center pb-2 lng-last_articles">Last Articles</h2>
+    <h1 class="text-center pb-2 lng-last_articles">Последние статьи</h2>
 
       <div class="container pt-4">
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -29,7 +29,7 @@
                   <h5 class="card-title">{{ article.title_ru }}</h5>
                   
                   <p class="card-text">{{ article.content_ru[:50] }}...</p>
-                  <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card lng-read-more">Read more</a>
+                  <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card lng-read-more">Читать больше</a>
                 </div>
                 <div class="card-footer text-muted">
                   {{ article.date.strftime("%Y.%m.%d") }}
