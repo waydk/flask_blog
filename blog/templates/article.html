@@ -1,7 +1,6 @@
 {% include "header.html" %}
     <h1 class="text-center p-5">{{ article.title_ru }}</h1>
     <div class="container pb-3">
-        <b style="color: #554f42;">ПИДОРАС</b>
         {% for item in article.content_ru.split() %}
             {% if item.startswith('!image') %}
                 <hr>
