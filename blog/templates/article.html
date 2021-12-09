@@ -1,10 +1,22 @@
 {% include "header.html" %}
-    <h1 class="text-center p-5">{{ article.title_en }}</h1>
+    <h1 class="text-center p-5">{{ article.title_ru }}</h1>
     <div class="container pb-3">
-        {% if article.content_en|length > 1500 %}
-            <p>{{ article.content_en }}</p> 
-        {% else %}
-            <p style="font-size: 25px; text-align: center;">{{ article.content_en }}</p>
-        {% endif %}
+        <b style="color: #554f42;">ПИДОРАС</b>
+        {% for item in article.content_ru.split() %}
+            {% if item.startswith('!image') %}
+                <hr>
+                <div class="text-center">
+                    <img class='article-image' src="{{ item.split('!image')[1] }}" alt="">
+                </div>
+                <hr>
+            {% elif item.startswith('!b') %}
+                <b style="color: #554f42;">{{ item.split('!b')[1] }}</b>
+            {% elif item.startswith('!tab') %}
+                <hr>
+            {% else %}
+                {{ item }}
+            {% endif %}
+            
+        {% endfor %}
     </div>
 {% include "footer.html" %}

@@ -78,6 +78,23 @@ h1 {
     color:white;
 }
 
+/* Article page */
+.article-image {
+    width: 70%;
+    border-radius: 7px;
+}
+
+@media (max-width: 700px) {
+    .article-image  {
+      width: 100%;
+    }
+  }
+
+hr {
+    clear: both;
+    visibility: hidden;
+}
+
 /* Footer */
 .text-footer {
     color: #d3d3d3;
