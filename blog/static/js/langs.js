@@ -38,5 +38,8 @@ const langArr = {
         "ru": "Последние статьи",
         "en": "Last Articles",
     }, 
-    
+    "read-more": {
+        "ru": "Читать дальше",
+        "en": "Read more",
+    },  
 }

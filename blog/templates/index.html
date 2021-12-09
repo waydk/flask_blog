@@ -26,9 +26,10 @@
               <div class="card">
                 <div class="card-body">
 
-                  <h5 class="card-title">{{ article.title_en }}</h5>
-                  <p class="card-text">{{ article.content_en[:50] }}...</p>
-                  <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card">Read more</a>
+                  <h5 class="card-title">{{ article.title_ru }}</h5>
+                  
+                  <p class="card-text">{{ article.content_ru[:50] }}...</p>
+                  <a href="{{ url_for('show_article', title=article.title_en) }}" class="btn btn-card lng-read-more">Read more</a>
                 </div>
                 <div class="card-footer text-muted">
                   {{ article.date.strftime("%Y.%m.%d") }}
