@@ -135,3 +135,9 @@ hr {
     background-color: #8b877a;
     color: #d3d3d3;
 }
+
+
+/* Video */
+.videoplayer {
+    height: 560px;
+}
