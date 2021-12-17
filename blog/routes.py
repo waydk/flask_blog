@@ -56,17 +56,3 @@ def show_article(title):
     """
     article = Articles.query.filter_by(title_en=title).first()
     return render_template('article.html', article=article)
-
-@app.route('/contact', methods=["GET", "POST"])
-def contact():
-    """Contact page (send email in your name
-    in English only)
-    """
-    if request.method == "POST":
-        data = request.form
-        try:
-            send_email(data["name"], data["email"], data["phone"], data["message"])
-        except UnicodeEncodeError:
-            return render_template('contact.html', title='Your email was not sent (english only)')
-        return render_template('contact.html', title='Your email has been sent')
-    return render_template('contact.html', title='Связаться со мной')

@@ -8,7 +8,9 @@ h1 {
     color: white;
 }
 
+
 /* Navbar */
+
 .navbar .navbar-nav .nav-link {
     color: white;
     font-size: 15px;
@@ -29,6 +31,7 @@ h1 {
 
 
 /* About me */
+
 #about-me {
     padding: 12% 10% 11% 10%;
     font-size: 25px;
@@ -38,19 +41,17 @@ h1 {
     padding-bottom: 20px;
 }
 
-@media (max-width: 765px){
+@media (max-width: 765px) {
     .about-img {
         width: 370px;
         height: 300px;
     }
-
     #about-me {
         font-size: 20px;
     }
-  
-  }
+}
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
     .about-img {
         width: 270px;
         height: 200px;
@@ -61,7 +62,7 @@ h1 {
 /* Last articles */
 
 #last-articles {
-    padding-bottom: 10%;
+    padding-bottom: 80px;
 }
 
 .card {
@@ -75,27 +76,31 @@ h1 {
 }
 
 .btn-card:hover {
-    color:white;
+    color: white;
 }
 
+
 /* Article page */
+
 .article-image {
     width: 70%;
     border-radius: 7px;
 }
 
 @media (max-width: 700px) {
-    .article-image  {
-      width: 100%;
+    .article-image {
+        width: 100%;
     }
-  }
+}
 
 hr {
     clear: both;
     visibility: hidden;
 }
 
+
 /* Footer */
+
 .text-footer {
     color: #d3d3d3;
 }
@@ -107,25 +112,28 @@ hr {
 }
 
 .footer-icon:hover {
-    color:#5c574a;
+    color: #5c574a;
 }
 
 .footer {
     margin-top: 100px;
 }
 
+
 /* All articles */
+
 .all_articles {
     padding-bottom: 30px;
 }
-
 
 .all_articles .card {
     background-color: #9A9483;
     color: white;
 }
 
+
 /* Contact */
+
 .success-btn {
     background-color: #646054;
     color: #d3d3d3;
@@ -138,6 +146,18 @@ hr {
 
 
 /* Video */
-.videoplayer {
-    height: 560px;
+
+.animeplayer {
+    margin-top: 50px;
+    max-width: 700px;
+}
+
+iframe {
+    border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+    .animeplayer {
+        max-width: 400px;
+    }
 }
