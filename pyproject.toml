@@ -14,6 +14,10 @@ environs = "^9.3.4"
 Flask-Admin = "^1.5.8"
 Flask-BasicAuth = "^0.2.0"
 gunicorn = "^20.1.0"
+requests = "^2.27.1"
+bs4 = "^0.0.1"
+openpyxl = "^3.0.9"
+lxml = "^4.7.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"

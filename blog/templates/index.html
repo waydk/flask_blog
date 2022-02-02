@@ -9,8 +9,7 @@
             </div>
             <div class="col">
                 <h1 class="lng-about-title text-center">Обо мне</h1>
-                <p class="lng-about-text">Меня зовут Кирилл, но мне нравится, когда меня называют Кирой. Я изучаю Python для разработки Backend. Также я изучаю немного Js, я посмотрел документальный фильм о Vue.js и меня зацепило. Сейчас я изучаю Django, чтобы стать полноценным
-                    бэкенд-разработчиком. В свободное время я люблю смотреть аниме. Мое любимое - "Ковбой Бибоп". Также я люблю читать. Мой любимый автор - Харуки Мураками. Вот и вся информация.</p>
+                <p class="lng-about-text">Меня зовут Кирилл, но мне будет приятнее, если вы будете называть меня Кирой, считаю, что так удобнее и "Кирилл" мне не особо заходит. Я увлекаюсь программированием и хотел бы чтобы это увлечение стало в последующем моей профессией. В свободное время я смотрю аниме, читаю книги и залипаю в инсте. Я обожаю есть, обожаю спать.</p>
             </div>
         </div>
     </div>
@@ -46,10 +45,30 @@
 <h1 class="text-center lng-last_articles">Просмотр аниме</h2>
 
     <!-- Just an anime player -->
-    <div class="container animeplayer">
-        <video data-bg="#726d5f" data-resize="1" id="yohoho" data-kinopoisk="1049731" controls>
-      <source type="video/mp4">
-    </video>
-    </div>
+
+    <!-- <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+        <label for="name" class="form__label">Название аниме</label>
+    </div> -->
+
+    <form method="post">
+        <div class="form__group field">
+            <input type="input" class="form__field"  name='anime-title' required />
+            <label for="anime-title" class="form__label">Название аниме</label>
+            <button type="submit" class="btn btn-outline-secondary">Найти</button>
+        </div>
+    </form>
+
+    {% if kinopoisk_id == None %}
+        <h4 class="p-4">Тут будет плеер</h4>
+        <img id='animeplayer' src="https://i.gifer.com/uQ8.gif" alt="">
+    {% else %}
+        <div id='animeplayer' class="container animeplayer">
+            <video data-bg="#726d5f" data-resize="1" id="yohoho" data-kinopoisk="{{kinopoisk_id}}" controls>
+        <source type="video/emp4">
+        </video>
+        </div>
+    {% endif %}
+
 
     {% include "footer.html" %}
