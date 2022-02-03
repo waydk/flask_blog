@@ -42,33 +42,29 @@
         </div>
 </section>
 
-<h1 class="text-center lng-last_articles">Просмотр аниме</h2>
+
+
+<h1 id='anime-player' class="text-center lng-last_articles">Просмотр аниме</h2>
 
     <!-- Just an anime player -->
-
-    <!-- <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-        <label for="name" class="form__label">Название аниме</label>
-    </div> -->
-
-    <form method="post">
-        <div class="form__group field">
-            <input type="input" class="form__field"  name='anime-title' required />
-            <label for="anime-title" class="form__label">Название аниме</label>
-            <button type="submit" class="btn btn-outline-secondary">Найти</button>
-        </div>
-    </form>
-
-    {% if kinopoisk_id == None %}
-        <h4 class="p-4">Тут будет плеер</h4>
-        <img id='animeplayer' src="https://i.gifer.com/uQ8.gif" alt="">
-    {% else %}
-        <div id='animeplayer' class="container animeplayer">
-            <video data-bg="#726d5f" data-resize="1" id="yohoho" data-kinopoisk="{{kinopoisk_id}}" controls>
-        <source type="video/emp4">
-        </video>
-        </div>
-    {% endif %}
+    <div class="anime-container text-center">
+        <form method="post">
+            <div class="form__group field">
+                <input type="input" class="form__field"  name='anime-title' required />
+                <label for="anime-title" class="form__label">Название аниме</label>
+                <button type="submit" class="btn btn-sub">Найти</button>
+            </div>
+        </form>
+    
+        {% if kinopoisk_id != None %}
+            <div class="container animeplayer">
+                <video data-bg="#726d5f" data-resize="1" id="yohoho" data-kinopoisk="{{kinopoisk_id}}" controls>
+            <source type="video/emp4">
+            </video>
+            </div>
+        {% endif %}
+    </div>
 
 
-    {% include "footer.html" %}
+
+{% include "footer.html" %}
